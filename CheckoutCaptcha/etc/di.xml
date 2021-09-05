@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author     Nadeem Khan
+ * @package    Magelumen_CheckoutCaptcha
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Checkout\Api\PaymentInformationManagementInterface">
+        <plugin name="checkout-validate-captcha" type="Magelumen\CheckoutCaptcha\Model\Checkout\Plugin\Validation"/>
+    </type>
+    <type name="Magento\Checkout\Api\GuestPaymentInformationManagementInterface">
+        <plugin name="checkout-guest-validate-captcha" type="Magelumen\CheckoutCaptcha\Model\Checkout\Plugin\GuestValidation"/>
+    </type>
+</config>
